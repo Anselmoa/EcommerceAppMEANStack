@@ -1,0 +1,82 @@
+<!-- Images Carousel -->
+<div class="row carousel-div" id="slides_control">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item {{img.active}}" ng-repeat="img in produtosBanner">
+                <img ng-src="{{img.imagem}}" alt="...">
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<!-- END Images Carousel -->
+
+<!-- Product Carousel -->
+<div class="row product-Slider-Controllers">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="col-md-6 col-sm-6">
+                <h3>Produtos em Destaque</h3>
+            </div>
+            <div class="col-md-1 col-sm-1">
+                <h4><a href="">Ver mais</a></h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <!-- Controls -->
+            <div class="controls pull-right">
+                <a class="left fa fa-chevron-left btn btn-success" href="#product-Slider" data-slide="prev"></a>
+                <a class="right fa fa-chevron-right btn btn-success" href="#product-Slider" data-slide="next"></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="product-Slider" class="carousel slide" data-ride="carousel1">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item" ng-class="{active:$first}" ng-repeat="items in produtosDestaque">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-3 col-xs-12" ng-repeat="item in items">
+                        <div class="col-item">
+                            <div class="photo">
+                                <a href="">
+                                    <img ng-src="{{item.imagens[0]}}" class="img-responsive" alt="a" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="price col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                                        <h5>
+                                            {{item.nome}}</h5>
+                                        <h5 class="price-text-color">
+                                            ${{item.preco}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" separator clear-left">
+                                <p class="btn-add addtocart_button2">
+                                    <button type="submit " value="Add to Cart " title="Add to Cart " class="addtocart-button cart-click ">Add to Cart<span>&nbsp;</span></button>
+                                </p>
+                                <a href="# "><span class="glyphicon glyphicon-heart favorite-button " ng-class="{ 'favorite-button-Active': isActive} "ng-click="activeButton() " aria-hidden="true "></span></a>
+                            </div>
+                            <div class="clearfix ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Product Carousel -->

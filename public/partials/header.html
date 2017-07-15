@@ -1,0 +1,68 @@
+<nav class="navbar header">
+    <div class="container-fluid">
+        <div class="row top-Header">
+            <div class="col-md-2 col-xs-2 header-Logo">
+                <div class="col-md-12">
+
+                    <a href="#">
+                        <img src="images/Logo2.png" ng-click='criarBanner()' alt=""></a>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-xs-3 header-Search">
+                <div class="input-group">
+                    <div class="input-group-btn header-Categories dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle1 header-Button-Categories" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="header-Category">{{selected}}</span>
+                                <span class="caret"></span>
+                                </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dropdown-menu-Categories">
+                            <li ng-repeat="categoria in categorias" ng-click="select(categoria)"><a>{{categoria.nome}}</a></li>
+                        </ul>
+                    </div>
+                    <!-- /btn-group -->
+                    <!--<input type="text " class="form-control header-Search-Input" id="header-Search-Input" placeholder="Search " aria-label="... "> -->
+<input type="text" ng-model="procurarProdutos" placeholder="Procurar" uib-typeahead="nome for nome in procurarProduto($viewValue)" typeahead-loading="ProcurarProduto" typeahead-no-results="SemResultado" class="header-Search-Input" id="header-Search-Input">
+                    <div class="input-group-btn">
+                        <button class="btn header-Search-Button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+                <!-- /input-group -->
+            </div>
+            <div class="col-md-3 col-xs-3 navbar-right header-Account ">
+                <div class="col-md-6 col-xs-3 header-Account-SignIn">
+                    <div class="header-Account-SignIn-Text">
+                        <a href="# " class="header-Account-Name ">Hello. Sign In</a>
+                    </div>
+                    <div class=" header-myAccount dropdown" ng-mouseover="hover=true" ng-mouseleave="hover=false">
+                        <button class="header-myAccount-Button dropdown-toggle" ng-class="{headermyAccountDropdownActive: hover}" id="dropdownMenu2">My Account</button>
+                        <span class="caret"></span>
+                        <ul class="dropdown-menu dropdown-content header-myAccount-Dropdown" aria-labelledby="dropdownMenu2">
+                            <li><a>Sign In</a></li>
+                            <li><a>Create an Account</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-3 header-Account-ShoppingCart">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                </div>
+            </div>
+        </div>
+</nav>
+<div class="row bottom-Header">
+    <div class="col-md-2 col-md-offset-2">
+        <div class="input-group-btn dropdown bottom-Header-Dropdown" ng-mouseover="hover1=true" ng-mouseleave="hover1=false">
+            <button type="button" class="btn btn-default dropdown-toggle bottom-Header-Dropdown-Button" id="bottomDropdownMenu" ng-class="{bottomDropdownMenuActive: hover1}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Categories<span class="caret"></span> </button>
+            <ul class="dropdown-menu  dropdown-content bottom-Dropdown-Menu" aria-labelledby="dropdownMenu1">
+                <li class="dropdown-submenu" ng-repeat="categoriaSubMenu in categorias">
+                    <a href="#">{{categoriaSubMenu.nome}}</a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="subcategoriasSubMenu in categoriaSubMenu.subCategorias"><a href="#">{{subcategoriasSubMenu.nome}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+

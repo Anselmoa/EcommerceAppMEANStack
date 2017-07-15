@@ -1,0 +1,23 @@
+{
+  "name": "public",
+  "authors": [
+    "Anselmo <fabioanselmo94@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-carousel": "lifely-angular-carousel#^1.2.0",
+    "jquery": ">=1.7",
+    "angular-route": "^1.6.3",
+    "angular-ui-router": "^0.4.2"
+  }
+}

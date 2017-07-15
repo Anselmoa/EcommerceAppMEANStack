@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="projetoGlobal" ng-cloak>
+
+<head>
+    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header ng-include="'partials/header.html'" onload="selected ='Todas as Categorias'" ng-controller="HeaderCtrl">
+
+    </header>
+    <!-- Main io-View -->
+    <div class="container">
+        <div ui-view></div>
+    </div>
+    <!-- END Main ui-View -->
+
+
+    <!-- The content of your page would go here. -->
+
+    <footer class="footer-distributed" ng-cloak="">
+
+        <div class="footer-left">
+
+            <img src="images/Logo2.png" alt="">
+
+            <p class="footer-links">
+                <a href="#">Home</a> ·
+                <a href="#">About</a> ·
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Market Place &copy; 2016</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Avenida da Liberdade</span> Lisboa, Portugal</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 555 123456</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@marketplace.com">support@marketplace.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+    <script src="modules/ui-bootstrap-tpls-2.3.0.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/home-controller.js"></script>
+    <script src="controllers/header-controller.js"></script>
+    </script>
+</body>
+
+</html>
